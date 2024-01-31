@@ -1,0 +1,51 @@
+.about-me-section {
+    background-color: #141d2f;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    padding-left: 120px;
+    >.left-cont {
+        width: 35%;
+        >.about-me-content {
+           >h1 {
+            font-size: 112px;
+           }
+           >p {
+            font-size: 18px;
+           }
+           >.pair {
+            display: flex;
+            flex-direction: row;
+            margin-top: 80px;
+            >div {
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >img {
+                    height: 60px;
+                }
+            }
+            >p {
+                width: 80%;
+                padding-left: 32px;
+                font-weight: 300;
+            }
+           }
+           
+        }
+    }
+
+
+
+
+    >.right-cont {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        >img {
+            margin-bottom: -100px;
+        }
+    }
+}
