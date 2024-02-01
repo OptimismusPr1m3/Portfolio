@@ -1,0 +1,53 @@
+<section class="skills-content fontfam-poppins">
+  <div class="code-icons">
+    <div class="icons-row">
+      <div
+        class="icon-with-text"
+        *ngFor="let icon of iconsFirstRow; let i = index"
+      >
+        <img src="{{ icon }}" />
+        <p>{{ iconsNamesFirst[i] }}</p>
+      </div>
+    </div>
+    <div class="icons-row">
+      <div
+        class="icon-with-text"
+        *ngFor="let icon of iconsSecondRow; let i = index"
+      >
+        <img src="{{ icon }}" />
+        <p>{{ iconsNamesSecond[i] }}</p>
+      </div>
+    </div>
+    <div class="icons-row">
+      <div
+        class="icon-with-text"
+        *ngFor="let icon of iconsThirdRow; let i = index"
+      >
+        <img src="{{ icon }}" />
+        <p>{{ iconsNamesThird[i] }}</p>
+      </div>
+    </div>
+    <div class="icons-row">
+      <div class="icon-with-text">
+        <img src="/assets/images/icons/material_design.png" />
+        <p>Material design</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-head">
+    <div class="skills-transition">
+      <h2>Skills</h2>
+      <div class="purple-transition-line"></div>
+    </div>
+    <div class="skills-quote">
+      <p>
+        I have gained experience in building projects with various front end
+        technologies and concepts
+      </p>
+    </div>
+    <div class="skills-btn">
+        <button>Get in touch</button>
+    </div>
+  </div>
+</section>

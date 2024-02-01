@@ -1,0 +1,117 @@
+.skills-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  > .code-icons {
+    width: 50%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    > .icons-row {
+      display: flex;
+      flex-direction: row;
+      > .icon-with-text {
+        width: 80px;
+        height: 100px;
+        margin-left: 90px;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        > img {
+          margin-bottom: 12px;
+          &:hover {
+            animation: bounce 700ms ;
+            @keyframes bounce {
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                  transform: translateY(0);
+                }
+                40% {
+                  transform: translateY(-30px);
+                }
+                60% {
+                  transform: translateY(-15px);
+                }
+              }
+          }
+        }
+        > p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  > .skills-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    >.skills-transition {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 82%;
+        justify-content: space-between;
+        > h2 {
+            font-size: 100px;
+        }
+        > div {
+            height: 5px;
+            width: 315px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            margin-left: 40px;
+            background-color: #D61CE6;
+        }
+    }
+    >.skills-quote {
+        width: 82%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        >p { 
+            margin-right: 120px;
+        }
+    }
+    >.skills-btn {
+        margin-top: 40px;
+        width: 82%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 80px;
+        >button {
+        background-color: #e86f00;
+        color: #ffffff;
+        border: 2px solid #e86f00;
+        border-radius: 12px;
+        height: 60px;
+        width: 180px;
+        font-size: 24px;
+        font-family: "Pobbins";
+        padding: 16px;
+        transition: all 0.4s ease;
+        &:hover {
+          cursor: pointer;
+          width: 200px;
+          height: 80px;
+          background-color: #ff4747;
+        }
+        }
+    }
+  }
+}
+
+
+
