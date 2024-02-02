@@ -12,5 +12,9 @@
       projects I have developed.
     </p>
   </div>
-  <div class="portfolio-cards"></div>
+  <div class="portfolio-cards">
+    <div class="projects-cards" *ngFor="let card of portfolioImages; let i = index">
+      <img src="{{card}}">
+    </div>
+  </div>
 </section>

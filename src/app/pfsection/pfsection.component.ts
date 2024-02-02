@@ -10,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class PfsectionComponent {
 
+  portfolioImages: string[] = [
+    '/assets/images/projectframes/Pollo loco 1.png',
+    '/assets/images/projectframes/Pollo loco 2.png',
+    '/assets/images/projectframes/Pollo loco 3.png',
+    '/assets/images/projectframes/Pollo loco 4.png',
+  ]
+
 }

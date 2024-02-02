@@ -6,14 +6,14 @@
   > .pf-header {
     display: flex;
     flex-direction: column;
-    >.pf-header-transition-cont {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        overflow: hidden;
-        background-color: #141d2f;
-        margin-top: -180px;
-      >.pf-head-transition {
+    > .pf-header-transition-cont {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow: hidden;
+      background-color: #141d2f;
+      margin-top: -180px;
+      > .pf-head-transition {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -30,7 +30,7 @@
           margin-left: 40px;
         }
       }
-      >img {
+      > img {
         position: relative;
         right: -380px;
         top: 10px;
@@ -39,6 +39,35 @@
     > p {
       margin-left: 120px;
       margin-top: -430px;
+    }
+  }
+  > .portfolio-cards {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: #141d2f;
+    > .projects-cards {
+      background-color: #141d2f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 600px;
+      width: 650px;
+      margin-bottom: 40px;
+      border: 1px solid #e86f00;
+      border-radius: 12px;
+      transition: all .2s;
+      > img {
+        &:hover {
+          transform: scale(1.3);
+          overflow: hidden;
+        }
+      } 
     }
   }
 }
