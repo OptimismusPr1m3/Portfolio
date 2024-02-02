@@ -1,0 +1,44 @@
+.pf-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #141d2f;
+  color: #ffffff;
+  > .pf-header {
+    display: flex;
+    flex-direction: column;
+    >.pf-header-transition-cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: #141d2f;
+        margin-top: -180px;
+      >.pf-head-transition {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: -250px;
+        > div {
+          height: 5px;
+          width: 80px;
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
+          background-color: #ff4747;
+        }
+        > h2 {
+          font-size: 100px;
+          margin-left: 40px;
+        }
+      }
+      >img {
+        position: relative;
+        right: -380px;
+        top: 10px;
+      }
+    }
+    > p {
+      margin-left: 120px;
+      margin-top: -430px;
+    }
+  }
+}
