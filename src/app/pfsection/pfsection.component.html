@@ -17,17 +17,20 @@
       <img src="{{card}}">
       <div class="overlay">
         <div class="git-live-link">
-          <a class="git-link" href="#">Github</a>
+          <a class="git-link" href="{{portfolioGitLinks[i]}}">Github</a>
           <a class="live-link" href="#">Live test</a>
         </div>
         <div class="pf-info-cont">
-          <h4>Sharkie</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, nesciunt. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt totam consequatur maiores!</p>
+          <h4>{{portfolioTitles[i]}}</h4>
+          <p>{{portfolioInfos[i]}}</p>
           <div class="used-tech">
-            <p>JavaScript | HTML | CSS</p>
+            <p>{{portfolioTech[i]}}</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="pf-orange-shadow">
+    <img src="/assets/images/shapes/orange_pf_shadow.png">
   </div>
 </section>
