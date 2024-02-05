@@ -1,96 +1,154 @@
 .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #141d2f;
+  color: #ffffff;
+  margin-top: -120px;
+  > .c-head {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    background-color: #141d2f;
-    color: #ffffff;
-    margin-top: -120px;
-    >.c-head {
-        width: 100%;
+    > h2 {
+      font-size: 100px;
+      margin-right: 40px;
+    }
+    > .contact-transition-line {
+      background-color: #e86f00;
+      width: 560px;
+      height: 5px;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+  }
+  > .contact-form-content {
+    display: flex;
+    width: 100%;
+    margin-top: 120px;
+    flex-direction: row;
+    justify-content: space-between;
+    > .problem-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      > .problem-head {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         align-items: center;
-        >h2 {
-            font-size: 100px;
-            margin-right: 40px;
+        justify-content: flex-start;
+        > .purple-transition {
+          width: 80px;
+          height: 5px;
+          background-color: #d61ce6;
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
         }
-        >.contact-transition-line {
-            background-color: #e86f00;
-            width: 560px;
-            height: 5px;
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
+        > h4 {
+          margin-left: 40px;
+          font-size: 40px;
+          font-weight: 600;
         }
+      }
+      > .problem-content {
+        margin-left: 120px;
+        margin-top: 40px;
+        > p {
+          margin-bottom: 30px;
+        }
+      }
     }
-    >.contact-form-content {
+    > .form-content {
+      width: 50%;
+      > form {
+        margin-right: 120px;
         display: flex;
-        width: 100%;
-        margin-top: 120px;
-        flex-direction: row;
-        justify-content: space-between;
-        >.problem-section {
-            width: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        > .input-container {
+            width: 100%;
+            margin-bottom: 40px;
+          > input [type="email"],
+          [type="text"],
+          textarea,
+          ::placeholder {
+            font-family: "Poppins";
+            color: #ffffff;
+          }
+          > input[type="email"],
+          [type="text"],
+          textarea {
+            width: 95%;
+            padding: 16px;
+            border: 1px solid #ff4747;
+            background-color: #141d2f;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 400;
+            resize: vertical;
+            color: #ffffff;
+            background-image: url("/assets/images/icons/invalid.png");
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            &:hover {
+              border-color: #e86f00;
+              cursor: pointer;
+            }
+            &:focus {
+              background-color: #141d2f;
+              outline: none !important;
+              border: 2px solid #ff4747;
+            }
+          }
+          > textarea {
+            background-position: 95% 8%;
+            margin-bottom: 8px;
+          }
+          > .message-warning {
             display: flex;
-            flex-direction: column;
-            >.problem-head {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-                >.purple-transition {
-                    width: 80px;
-                    height: 5px;
-                    background-color: #d61ce6;
-                    border-top-right-radius: 12px;
-                    border-bottom-right-radius: 12px;
-                }
-                >h4 {
-                    margin-left: 40px;
-                    font-size: 40px;
-                    font-weight: 600;
-                }
-            }
-            >.problem-content {
-                margin-left: 120px;
-                margin-top: 40px;
-                >p {
-                    margin-bottom: 30px;
-                }
-            }
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 91%;
+            color: #ff4747;
+            font-size: 15px;
+          }
         }
-        >.form-content {
-            width: 50%;
-            >form {
-                margin-right: 120px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                >input [type=email], [type=text], textarea, ::placeholder {
-                    font-family: 'Poppins';
-                    color: #ffffff;
-                }
-                >input[type=email], [type=text], textarea {
-                    width: 90%;
-                    padding: 16px;
-                    border: 1px solid #ff4747;
-                    background-color: #141d2f;
-                    border-radius: 12px;
-                    margin-bottom: 40px;
-                    font-size: 16px;
-                    font-weight: 400;
-                    resize: vertical;
-                    color: #ffffff;
-                    background-image: url("/assets/images/icons/invalid.png");
-                    background-repeat: no-repeat;
-                    background-position-x: 640px;
-                    background-position-y: 12px;
-                    &:hover {
-                        border-color: #e86f00;
-                        cursor: pointer;
-                    }
-                }
-            }
+        > .checkbox-validation {
+          width: 94%;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          margin-bottom: 40px;
+          > p {
+            font-size: 14px;
+            margin-left: 16px;
+          }
         }
+        >.submit-btn {
+          height: 80px;
+          width: 350px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          > input[type="submit"] {
+            height: 60px;
+            width: 250px;
+            font-size: 24px;
+            background-color: #b6b6b6;
+            color: #ffffff;
+            border: 1px solid #b6b6b6;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+              height: 80px;
+              width: 300px;
+            }
+          }
+        }
+      }
     }
+  }
 }
