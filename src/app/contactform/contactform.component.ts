@@ -11,12 +11,16 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactformComponent {
   isInvalidName: boolean = false;
+  isInvalidMail: boolean = false;
+  isInvalidMessage: boolean = false;
+
   contactData = {
     name: '',
     email: '',
     message: '',
+    pPolicy: false
   };
-  isInvalidMail: boolean = false;
+  
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
@@ -24,6 +28,12 @@ export class ContactformComponent {
     } else if (!ngForm.valid && ngForm.submitted) {
       this.checkNameValidation();
       this.checkEmailValidation();
+      this.checkMessageValidation();
+    }
+  }
+  checkMessageValidation() {
+    if (this.contactData.message == '') {
+      this.isInvalidMessage = true;
     }
   }
 
