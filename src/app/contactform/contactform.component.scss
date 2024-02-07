@@ -1,5 +1,6 @@
 .contact-section {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   background-color: #141d2f;
@@ -29,6 +30,7 @@
     margin-top: 120px;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 2;
     > .problem-section {
       width: 50%;
       display: flex;
@@ -89,7 +91,6 @@
             font-weight: 400;
             resize: vertical;
             color: #ffffff;
-            
             &:hover {
               border-color: #e86f00;
               cursor: pointer;
@@ -102,7 +103,15 @@
           }
           > textarea {
             background-position: 95% 8%;
-            margin-bottom: 8px;
+            position: relative;
+            &::-webkit-resizer {
+              margin: 10px;
+              height: 20px;
+              padding-bottom: 10px;
+              width: 20px;
+              background-image: url('/assets/images/icons/resizer_icon.png');
+              background-repeat: no-repeat;
+            }
           }
           > .message-warning {
             display: flex;
@@ -115,41 +124,10 @@
         }
         > .checkbox-validation {
           width: 94%;
-          position: relative;
           display: flex;
           align-items: center;
           flex-direction: row;
           margin-bottom: 40px;
-          >input {
-            position: absolute;
-            
-            opacity: 0;
-            height: 20px;
-            width: 20px;
-            z-index: 123123;
-            &:hover .checkbox {
-              cursor: pointer;
-            }
-          }
-          >.checkbox {
-            position: absolute;
-            top: 0;
-            left: 0px;
-            height: 20px;
-            width: 20px;
-            border: 3px #e86f00 solid;
-            border-radius: 4px;
-            background-color: #141d2f;
-            &:hover {
-              cursor: pointer;
-              background-color: #183771;
-            }
-            &::after {
-              content: '';
-              position: absolute;
-              display: none;
-            }
-          }
           > p {
             font-size: 14px;
             margin-left: 16px;
@@ -180,6 +158,66 @@
       }
     }
   }
+}
+
+.red-shape {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-top: -420px;
+  margin-right: -550px;
+  
+}
+
+/*checkbox styling*/
+
+.checkbox-cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  border-radius: 50%;
+  >input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  >.checkbox {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #e86f00;
+    background-color: #141d2f;
+    border-radius: 3px;
+  }
+}
+
+.checkbox:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-cont input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.checkbox-cont .checkbox:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #e86f00;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .ng-valid[required], .ng-valid.required  {
