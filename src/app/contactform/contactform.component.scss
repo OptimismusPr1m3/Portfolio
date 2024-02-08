@@ -117,9 +117,11 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            width: 91%;
+            width: 90%;
+            font-weight: 200;
             color: #ff4747;
-            font-size: 15px;
+            font-size: 14px;
+            margin-top: 8px;
           }
         }
         > .checkbox-validation {
@@ -148,16 +150,30 @@
             border: 1px solid #b6b6b6;
             border-radius: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
-            &:hover {
+            cursor: not-allowed;
+            &:hover:not(:disabled) {
               height: 80px;
               width: 300px;
+              cursor: pointer;
+            }
+            &:not(:disabled) {
+              border-color: #e86f00;
+              background-color: #e86f00;
+              cursor: pointer;
             }
           }
         }
       }
     }
   }
+}
+
+input:-internal-autofill-selected {
+  background-color: #141d2f;
+}
+
+.text-message {
+  margin-top: 2px !important;
 }
 
 .red-shape {
@@ -167,7 +183,25 @@
   overflow: hidden;
   margin-top: -420px;
   margin-right: -550px;
-  
+  height: 520px;
+  >img {
+    height: fit-content;
+  }
+}
+
+.scroll-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 4;
+  >img {
+    margin-top: -80px;
+    height: 40px;
+    margin-right: 120px;
+    &:hover {
+      content: url('/assets/images/icons/scroll_orange.png');
+    }
+  }
 }
 
 /*checkbox styling*/
@@ -220,9 +254,7 @@
   transform: rotate(45deg);
 }
 
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948;
-}
+
 
 .ng-untouched {
   background-image: none !important;
@@ -230,6 +262,13 @@
 
 .ng-invalid:not(form)  {
   background-image: url("/assets/images/icons/invalid.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
+.ng-valid {
+  border-color: #70e61c !important;
+  background-image: url("/assets/images/icons/check_green.png");
   background-repeat: no-repeat;
   background-position: 95% 50%;
 }
