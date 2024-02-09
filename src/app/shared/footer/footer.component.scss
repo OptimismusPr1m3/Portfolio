@@ -2,6 +2,7 @@
   background-color: #141d2f;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   color: #ffffff;
   > .f-transition-orange {
     width: 100%;
@@ -19,6 +20,10 @@
       display: flex;
       width: 350px;
       flex-direction: column;
+      >a {
+        text-decoration: none;
+        color: #ffffff;
+      }
       > .prename-container {
         margin-left: 120px;
         display: flex;
@@ -40,11 +45,24 @@
           -webkit-text-fill-color: transparent;
         }
       }
-      > a {
-        text-decoration: none;
-        color: #ffffff;
+      > .impressum-wrapper {
         margin-left: 124px;
-        margin-top: -8px;
+        display: flex;
+        flex-direction: column;
+        &:hover .impressum-underline {
+          background-color: #ff4747;
+        }
+        > .impressum-cont {
+          text-decoration: none;
+          color: #ffffff;
+          margin-top: -8px;
+        }
+        > .impressum-underline {
+          transition: all 0.3s ease;
+          background-color: transparent;
+          height: 2px;
+          width: 54px;
+        }
       }
     }
     > .name-copyR {
@@ -60,34 +78,37 @@
       }
     }
     .social-links-content {
+      display: flex;
+      overflow: hidden;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-right: -60px;
+      width: 350px;
+      > a {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        margin-right: 70px;
-        width: 350px;
-        >a {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            height: 30px;
-            width: 40px;
-            margin-right: 50px;
-            transition: all 0.1s ease;
-            &:hover img {
-                transform: scale(1.2);
-                margin-left:10px;
-                cursor: pointer;
-            }
-            &:hover {
-                margin-right: 70px;
-                cursor: pointer;
-            }
-            >img {
-                height: 30px;
-                transition: all 0.1s ease;
-            }
+        align-items: center;
+        justify-content: flex-start;
+        height: 40px;
+        width: 30px;
+        margin-right: 40px;
+        transition: all 0.1s ease;
+        &:hover img {
+          transition: all 0.3s ease;
+          transform: scale(1.2);
+          margin-left: 10px;
+          cursor: pointer;
         }
+        &:hover {
+          transition: all 0.3s ease;
+          margin-right: 70px;
+          cursor: pointer;
+        }
+        > img {
+          height: 30px;
+          transition: all 0.3s ease;
+        }
+      }
     }
   }
 }
