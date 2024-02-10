@@ -62,13 +62,14 @@
         width: 160px;
         font-size: 24px;
         font-family: "Pobbins";
-        padding: 18px;
+        padding: 16px;
         transition: all 0.4s ease;
         &:hover {
           cursor: pointer;
           width: 200px;
           height: 80px;
           background-color: #ff4747;
+          border-color: #ff4747;
         }
         
       }
