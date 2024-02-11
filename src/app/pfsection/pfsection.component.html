@@ -17,8 +17,8 @@
       <img src="{{card}}">
       <div class="overlay">
         <div class="git-live-link">
-          <a class="git-link" href="{{portfolioGitLinks[i]}}">Github</a>
-          <a class="live-link" href="#">Live test</a>
+          <a class="git-link" href="{{portfolioGitLinks[i]}}" [target]="'_blank'">Github</a>
+          <a class="live-link" href="{{portfolioLiveLinks[i]}}" [target]="'_blank'">Live test</a>
         </div>
         <div class="pf-info-cont">
           <h4>{{portfolioTitles[i]}}</h4>
