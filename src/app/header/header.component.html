@@ -1,6 +1,5 @@
 <section class="head-content fontfam-poppins">
-  <div class="prename-container">
-
+  <a href="#" class="prename-container">
     <p>S</p>
     <p>e</p>
     <p>b</p>
@@ -10,18 +9,18 @@
     <p class="i-letter-styling">i</p>
     <p>a</p>
     <p class="n-letter-styling">n</p>
-  </div>
+  </a>
   <div class="links">
     <div>
-      <a (click)="toggleActiveLink('aboutMe')" [class.active-link]="aboutMe" href="#">About me</a>
+      <a (click)="toggleActiveLink('aboutMe')" [class.active-link]="aboutMe" href="#aboutMe">About me</a>
       <div [class.active-underline]="aboutMe"></div>
     </div>
     <div>
-      <a (click)="toggleActiveLink('skills')" [class.active-link]="skills" href="#">Skills</a>
+      <a (click)="toggleActiveLink('skills')" [class.active-link]="skills" href="#skills">Skills</a>
       <div [class.active-underline]="skills"></div>
     </div>
     <div>
-      <a (click)="toggleActiveLink('portfolio')" [class.active-link]="portfolio" href="#">Portfolio</a>
+      <a (click)="toggleActiveLink('portfolio')" [class.active-link]="portfolio" href="#portfolio">Portfolio</a>
       <div [class.active-underline]="portfolio"></div>
     </div>
   </div>

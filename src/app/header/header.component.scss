@@ -10,7 +10,9 @@
   color: #ffffff;
   background-color: #141d2f;
   z-index: 100;
-  > div {
+  > .prename-container {
+    text-decoration: none;
+    color: #ffffff;
     margin-left: 120px;
     display: flex;
     flex-direction: row;
