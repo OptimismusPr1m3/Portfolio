@@ -10,9 +10,15 @@
            >h1 {
             font-size: 100px;
             margin-bottom: 40px;
+            @media(max-width: 1400px) {
+                font-size: 74px;
+              }
            }
            >p {
             font-size: 16px;
+            @media(max-width: 1400px) {
+                font-size: 15px;
+              }
            }
            >.pair {
             display: flex;
@@ -25,6 +31,9 @@
                 align-items: center;
                 >img {
                     height: 60px;
+                    @media(max-width: 1400px) {
+                        height: 50px;
+                      }
                 }
             }
             >p {

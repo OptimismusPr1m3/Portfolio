@@ -25,16 +25,25 @@
       rotate: -90deg;
       font-size: 96px;
       z-index: 10;
+      @media(max-width: 1400px) {
+        font-size: 50px;
+      }
     }
     > div {
       > h1 {
         font-size: 120px;
         margin-bottom: -16px;
+        @media(max-width: 1400px) {
+          font-size: 74px;
+        }
       }
       > h3 {
         font-size: 80px;
         font-weight: 300;
         color: #ff4747;
+        @media(max-width: 1400px) {
+          font-size:46px;
+        }
       }
     }
   }
@@ -47,6 +56,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    @media(max-width: 1400px) {
+      top: 520px;
+    }
     > a {
       text-decoration: none;
         display: flex;

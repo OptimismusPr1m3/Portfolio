@@ -26,6 +26,9 @@
         transition: all 0.3s ease;
         > img {
           margin-bottom: 12px;
+          @media(max-width: 1400px) {
+            height: 44px;
+          }
           &:hover {
             animation: bounce 700ms;
             @keyframes bounce {
@@ -47,6 +50,9 @@
         }
         > p {
           text-align: center;
+          @media(max-width: 1400px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -65,6 +71,9 @@
       justify-content: space-between;
       > h2 {
         font-size: 100px;
+        @media(max-width: 1400px) {
+          font-size: 74px;
+        }
       }
       > div {
         height: 5px;
@@ -81,6 +90,9 @@
       margin-top: 40px;
       > p {
         margin-right: 120px;
+        @media(max-width: 1400px) {
+          font-size: 15px;
+        }
       }
     }
     > .skills-btn {
