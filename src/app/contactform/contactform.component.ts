@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -10,9 +11,14 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
+
+  http = inject(HttpClient);
+
   isInvalidName: boolean = false;
   isInvalidMail: boolean = false;
   isInvalidMessage: boolean = false;
+
+  mailTest = true;
 
   contactData = {
     name: '',
@@ -21,10 +27,28 @@ export class ContactformComponent {
     pPolicy: false
   };
   
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
-      console.log(this.contactData);
+      this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+        next: (response: any) => {
+          ngForm.resetForm();
+        },
+        error: (error: any) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      })
     } else if (!ngForm.valid && ngForm.submitted) {
       this.checkNameValidation();
       this.checkEmailValidation();
