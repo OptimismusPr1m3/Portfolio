@@ -7,9 +7,21 @@
 
 .fontfam-poppins {
     font-family: 'Poppins';
+} 
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff4747;
+  border-radius: 4px;
 }
 
-
+::-webkit-scrollbar-track{
+  background-color: #141d2f;
+  border: 1px solid #141d2f;
+}
 
 
 
