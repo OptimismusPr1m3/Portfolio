@@ -28,9 +28,9 @@ export class PfsectionComponent {
   ];
   portfolioTitles: string[] = ['Sharkie', 'Join', 'Pokedéx', 'Placeholder'];
   portfolioInfos: string[] = [
-    'Take on the role of Sharkie, a brave little white shark, as you navigate through treacherous waters filled with enemies like pufferfish and jellyfish. Fight your way through challenging levels, mastering the art of survival beneath the waves. But beware, the ultimate showdown awaits as you face off against the mighty Great White Shark  ',
-    'Placeholder',
-    'Placeholder',
+    'Take on the role of Sharkie, a brave little white shark, as you navigate through treacherous waters filled with enemies. But beware, the ultimate showdown awaits as you face off against the mighty great white shark.',
+    'Welcome to Join, your collaborative Kanban board designed for group productivity! With Join, you can sign up and gain instant access to your personalized task dashboard, where you will find all your assignments neatly organized.',
+    'Introducing my Pokedex, powered by the PokeAPI! Explore, search, and learn about Pokemon with ease. Dive into stats and attacks for each Pokemon. The ultimate companion for Pokemon enthusiasts!',
     'Placeholder',
   ];
   portfolioTech: string[] = [
