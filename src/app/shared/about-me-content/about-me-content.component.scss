@@ -23,6 +23,9 @@ p {
     align-items: center;
     height: 75px;
     z-index: 12;
+    @media(max-width: 1450px) {
+     width: 10%;     
+    }
     &:hover img {
       height: 70px;
     }

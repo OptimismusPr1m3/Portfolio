@@ -16,6 +16,9 @@
     margin-left: 120px;
     display: flex;
     flex-direction: row;
+    @media(max-width: 1450px) {
+     margin-left: 90px;     
+    }
     p {
       margin: 0;
       font-weight: 700;
@@ -40,6 +43,9 @@
     justify-content: center;
     align-items: center;
     margin-right: 80px;
+    @media(max-width: 1450px) {
+      margin-right: 50px;
+    }
     > div {
       display: flex;
       flex-direction: column;

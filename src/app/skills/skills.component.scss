@@ -4,6 +4,9 @@
   justify-content: space-between;
   width: 100%;
   color: #ffffff;
+  @media (max-width: 1450px) {
+    flex-direction: column-reverse;
+  }
   > .code-icons {
     width: 50%;
     margin-left: 30px;
@@ -11,6 +14,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media(max-width:1450px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 60px;
+      margin-bottom: -40px
+    }
     > .icons-row {
       display: flex;
       flex-direction: row;
@@ -24,9 +33,12 @@
         justify-content: center;
         align-items: center;
         transition: all 0.3s ease;
+        @media(max-width: 1450px) {
+          margin-bottom: 50px;
+        }
         > img {
           margin-bottom: 12px;
-          @media(max-width: 1400px) {
+          @media (max-width: 1400px) {
             height: 44px;
           }
           &:hover {
@@ -50,7 +62,7 @@
         }
         > p {
           text-align: center;
-          @media(max-width: 1400px) {
+          @media (max-width: 1400px) {
             font-size: 14px;
           }
         }
@@ -63,15 +75,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    @media (max-width: 1450px) {
+      padding-left: 90px;
+      align-items: normal;
+    }
     > .skills-transition {
       display: flex;
       flex-direction: row;
       align-items: center;
       width: 82%;
       justify-content: space-between;
+      @media (max-width: 1450px) {
+        width: 100%;
+      }
       > h2 {
         font-size: 100px;
-        @media(max-width: 1400px) {
+        @media (max-width: 1400px) {
           font-size: 74px;
         }
       }
@@ -90,40 +109,52 @@
       margin-top: 40px;
       > p {
         margin-right: 120px;
-        @media(max-width: 1400px) {
+        @media (max-width: 1400px) {
           font-size: 15px;
         }
       }
     }
-    > .skills-btn {
-      text-decoration: none;
-      color: #ffffff;
-      margin-top: 40px;
-      width: 82%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
+  }
+}
+
+.skills-btn {
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 80px;
+  > button {
+    background-color: #e86f00;
+    color: #ffffff;
+    border: 2px solid #e86f00;
+    border-radius: 12px;
+    height: 60px;
+    width: 180px;
+    font-size: 24px;
+    font-family: "Pobbins";
+    padding: 16px;
+    transition: all 0.4s ease;
+    &:hover {
+      cursor: pointer;
+      width: 200px;
       height: 80px;
-      > button {
-        background-color: #e86f00;
-        color: #ffffff;
-        border: 2px solid #e86f00;
-        border-radius: 12px;
-        height: 60px;
-        width: 180px;
-        font-size: 24px;
-        font-family: "Pobbins";
-        padding: 16px;
-        transition: all 0.4s ease;
-        &:hover {
-          cursor: pointer;
-          width: 200px;
-          height: 80px;
-          background-color: #ff4747;
-          border-color: #ff4747;
-        }
-      }
+      background-color: #ff4747;
+      border-color: #ff4747;
     }
+  }
+}
+
+@media (max-width: 1450px) {
+  #skillsBtn {
+    display: none;
+  }
+  #skillsBtnMobile {
+    display: flex !important;
+    justify-content: center;
+    margin-top: -130px;
   }
 }

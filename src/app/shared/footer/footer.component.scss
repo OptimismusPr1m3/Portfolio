@@ -28,6 +28,9 @@
         margin-left: 120px;
         display: flex;
         flex-direction: row;
+        @media(max-width: 1450px) {
+         margin-left: 90px; 
+        }
         > p {
           font-weight: 700;
           font-size: 40px;
@@ -49,6 +52,9 @@
         margin-left: 124px;
         display: flex;
         flex-direction: column;
+        @media(max-width: 1450px) {
+         margin-left: 94px; 
+        }
         &:hover .impressum-underline {
           background-color: #ff4747;
         }
@@ -84,6 +90,9 @@
       justify-content: flex-start;
       margin-right: -60px;
       width: 350px;
+      @media(max-width: 1450px) {
+       margin-right: -90px;   
+      }
       > a {
         display: flex;
         flex-direction: row;

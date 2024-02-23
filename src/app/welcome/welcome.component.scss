@@ -117,6 +117,9 @@
       margin-right: 40px;
       border-top-right-radius: 12px;
       border-bottom-right-radius: 12px;
+      @media(max-width: 1450px) {
+       width: 90px;   
+      }
     }
     >.soc-links-cont {
       display: flex;

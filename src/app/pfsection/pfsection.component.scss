@@ -24,10 +24,16 @@
           border-top-right-radius: 12px;
           border-bottom-right-radius: 12px;
           background-color: #ff4747;
+          @media(max-width: 1450px) {
+            width: 60px;
+          }
         }
         > h2 {
           font-size: 100px;
           margin-left: 40px;
+          @media(max-width: 1450px) {
+            margin-left: 30px;
+          }
           @media(max-width: 1400px) {
             font-size: 74px;
           }
@@ -42,6 +48,9 @@
     > p {
       margin-left: 120px;
       margin-top: -430px;
+      @media(max-width: 1450px) {
+        margin-left: 90px;
+      }
       @media(max-width: 1400px) {
         font-size: 15px;
       }
@@ -57,6 +66,10 @@
     align-items: center;
     margin-left: 120px;
     margin-right: 120px;
+    @media(max-width: 1450px) {
+      margin-left: 90px;
+      margin-right: 90px;
+    }
     background-color: #141d2f;
     > .projects-cards {
       position: relative;
@@ -72,6 +85,9 @@
       border: 1px solid #e86f00;
       border-radius: 12px;
       transition: all 0.9s;
+      @media(max-width: 1450px) {
+       width: 600px;   
+      }
       @media(max-width: 1400px) {
         width: 560px;
       }
