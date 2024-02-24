@@ -1,0 +1,56 @@
+<div [class.bar-opened]="barIsOpen">
+  <a href="#" class="prename-container">
+    <p>S</p>
+    <p>e</p>
+    <p>b</p>
+    <p>a</p>
+    <p>s</p>
+    <p>t</p>
+    <p class="i-letter-styling">i</p>
+    <p>a</p>
+    <p class="n-letter-styling">n</p>
+  </a>
+  <img (click)="emitCloseBarEvent()"
+    *ngIf="barIsOpen"
+    src="assets/images/icons/cross-menu.png"
+    class="cross"
+  />
+</div>
+<div class="links" [class.links-column]="barIsOpen">
+  <div>
+    <a
+      (click)="toggleActiveLink('aboutMe')"
+      [class.active-link]="aboutMe"
+      href="#aboutMe"
+      >About me</a
+    >
+    <div [class.active-underline]="aboutMe"></div>
+  </div>
+  <div>
+    <a
+      (click)="toggleActiveLink('skills')"
+      [class.active-link]="skills"
+      href="#skills"
+      >Skills</a
+    >
+    <div [class.active-underline]="skills"></div>
+  </div>
+  <div>
+    <a
+      (click)="toggleActiveLink('portfolio')"
+      [class.active-link]="portfolio"
+      href="#portfolio"
+      >Portfolio</a
+    >
+    <div [class.active-underline]="portfolio"></div>
+  </div>
+  <div *ngIf="barIsOpen">
+    <a
+      (click)="toggleActiveLink('contact')"
+      [class.active-link]="contact"
+      href="#contact"
+      >Contact</a
+    >
+    <div [class.active-underline]="contact"></div>
+  </div>
+</div>

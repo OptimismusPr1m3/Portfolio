@@ -1,27 +1,9 @@
 <section class="head-content fontfam-poppins">
-  <a href="#" class="prename-container">
-    <p>S</p>
-    <p>e</p>
-    <p>b</p>
-    <p>a</p>
-    <p>s</p>
-    <p>t</p>
-    <p class="i-letter-styling">i</p>
-    <p>a</p>
-    <p class="n-letter-styling">n</p>
-  </a>
-  <div class="links">
-    <div>
-      <a (click)="toggleActiveLink('aboutMe')" [class.active-link]="aboutMe" href="#aboutMe">About me</a>
-      <div [class.active-underline]="aboutMe"></div>
-    </div>
-    <div>
-      <a (click)="toggleActiveLink('skills')" [class.active-link]="skills" href="#skills">Skills</a>
-      <div [class.active-underline]="skills"></div>
-    </div>
-    <div>
-      <a (click)="toggleActiveLink('portfolio')" [class.active-link]="portfolio" href="#portfolio">Portfolio</a>
-      <div [class.active-underline]="portfolio"></div>
-    </div>
+  <app-headertemplate class="flex" *ngIf="!barOpened"></app-headertemplate>
+  <div (click)="toggleNavBar()" class="mobile-navbar" *ngIf="!barOpened">
+    <img src="assets/images/icons/burger-menu.png">
+  </div>
+  <div *ngIf="barOpened" [class.bar-slideIn]="barWasOpened" [class.bar-slideOut]="barWasClosed" class="navbar">
+    <app-headertemplate (barHasClosed)="handleBarClosing($event)" [barIsOpen]="barOpened"  class="column"></app-headertemplate>
   </div>
 </section>
