@@ -33,7 +33,9 @@
   margin-right: 90px;
   @media(max-width: 1110px){
     display: flex;
-    
+  }
+  @media(max-width: 900px) {
+    margin-right: 48px;
   }
 }
 

@@ -18,6 +18,9 @@
       @media(max-width: 1400px) {
         font-size: 74px;
       }
+      @media(max-width: 900px) {
+        font-size: 64px;
+      }
     }
     > .contact-transition-line {
       background-color: #e86f00;
@@ -28,6 +31,9 @@
       @media(max-width: 1450px) {
        width: 530px;   
       }
+      @media(max-width: 900px) {
+        width: 280px;
+      }
     }
   }
   > .contact-form-content {
@@ -37,15 +43,25 @@
     flex-direction: row;
     justify-content: space-between;
     z-index: 2;
+    @media(max-width: 900px) {
+      flex-direction: column;
+
+    }
     > .problem-section {
       width: 50%;
       display: flex;
       flex-direction: column;
+      @media(max-width: 900px) {
+        width: 100%;
+      }
       > .problem-head {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        @media(max-width: 900px) {
+          width: 100%;
+        }
         > .purple-transition {
           width: 80px;
           height: 5px;
@@ -55,6 +71,9 @@
           @media(max-width: 1450px) {
             width: 60px;
           }
+          @media(max-width: 900px) {
+            width: 28px;
+          }
         }
         > h4 {
           margin-left: 40px;
@@ -62,6 +81,9 @@
           font-weight: 600;
           @media(max-width: 1450px) {
             margin-left: 30px;
+          }
+          @media(max-width: 900px) {
+            margin-left: 20px;
           }
         }
       }
@@ -74,10 +96,19 @@
         > p {
           margin-bottom: 30px;
         }
+        @media(max-width: 900px) {
+          margin-left: 48px;
+          margin-right: 180px;
+        }
       }
     }
     > .form-content {
       width: 50%;
+      @media(max-width: 900px) {
+        width: 100%;
+        margin-left: 48px;
+        margin-right: 48px;
+      }
       > form {
         margin-right: 120px;
         display: flex;
@@ -148,6 +179,9 @@
           align-items: center;
           flex-direction: row;
           margin-bottom: 40px;
+          @media(max-width: 900px) {
+            margin-left: 200px;
+          }
           > p {
             font-size: 14px;
             margin-left: 16px;
@@ -299,4 +333,12 @@ input:-internal-autofill-selected {
   background-image: url("/assets/images/icons/check_green.png");
   background-repeat: no-repeat;
   background-position: 95% 50%;
+}
+
+
+
+@media(max-width:900px) {
+  .break-point {
+    display: none;
+  }
 }

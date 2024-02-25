@@ -41,6 +41,10 @@ section {
         flex-direction: column;
         margin-top: -250px;
         margin-bottom: 300px;
+        @media(max-width: 900px) {
+            padding-left: 48px;
+            padding-right: 48px;
+          }
     }
     
 }

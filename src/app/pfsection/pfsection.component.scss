@@ -27,6 +27,9 @@
           @media(max-width: 1450px) {
             width: 60px;
           }
+          @media(max-width: 900px) {
+            width: 28px;
+          }
         }
         > h2 {
           font-size: 100px;
@@ -36,6 +39,10 @@
           }
           @media(max-width: 1400px) {
             font-size: 74px;
+          }
+          @media(max-width: 900px) {
+            margin-left: 20px;
+            font-size: 64px;
           }
         }
       }
@@ -59,6 +66,9 @@
       }
       @media(max-width: 1400px) {
         font-size: 15px;
+      }
+      @media(max-width: 900px) {
+        margin-left: 48px;
       }
     }
   }

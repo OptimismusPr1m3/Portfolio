@@ -36,6 +36,10 @@
         @media(max-width: 1450px) {
           margin-bottom: 50px;
         }
+        @media(max-width: 900px) {
+          margin-left: 48px;
+          margin-right: 42px;
+        }
         > img {
           margin-bottom: 12px;
           @media (max-width: 1400px) {
@@ -79,6 +83,9 @@
       padding-left: 90px;
       align-items: normal;
     }
+    @media(max-width: 900px) {
+      padding-left: 48px;
+    }
     > .skills-transition {
       display: flex;
       flex-direction: row;
@@ -92,6 +99,9 @@
         font-size: 100px;
         @media (max-width: 1400px) {
           font-size: 74px;
+        }
+        @media(max-width: 900px) {
+          font-size: 64px;
         }
       }
       > div {
