@@ -17,8 +17,8 @@
   />
 </div>
 <div class="links" [class.links-column]="barIsOpen">
-  <div>
-    <a
+  <div id="aMeDesktop">
+    <a 
       (click)="toggleActiveLink('aboutMe')"
       [class.active-link]="aboutMe"
       href="#aboutMe"
@@ -26,7 +26,20 @@
     >
     <div [class.active-underline]="aboutMe"></div>
   </div>
-  <div>
+
+  <!--For Mobile-->
+  <div id="aMeMobile">
+    <a 
+      (click)="toggleActiveLink('aboutMe')"
+      [class.active-link]="aboutMe"
+      href="#aboutMeMobile"
+      >About me</a
+    >
+    <div [class.active-underline]="aboutMe"></div>
+  </div>
+  <!---->
+
+  <div id="skillDesktop">
     <a
       (click)="toggleActiveLink('skills')"
       [class.active-link]="skills"
@@ -35,6 +48,19 @@
     >
     <div [class.active-underline]="skills"></div>
   </div>
+
+  <!--For Mobile-->
+  <div id="skillMobile">
+    <a
+      (click)="toggleActiveLink('skills')"
+      [class.active-link]="skills"
+      href="#skillsMobile"
+      >Skills</a
+    >
+    <div [class.active-underline]="skills"></div>
+  </div>
+  <!---->
+
   <div>
     <a
       (click)="toggleActiveLink('portfolio')"

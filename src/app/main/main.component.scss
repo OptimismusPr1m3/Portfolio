@@ -1,8 +1,16 @@
 @media(max-width: 1450px) {
-    #aboutMe {
-        display: none;
+    .aboutMeDesktop {
+        display: none !important;
     }
-    #aboutMeMobile {
+    .aboutMeMobile {
         display: flex !important;
     }
+}
+
+.aboutMeDesktop {
+    display: block;
+}
+
+.aboutMeMobile{
+    display: none;
 }

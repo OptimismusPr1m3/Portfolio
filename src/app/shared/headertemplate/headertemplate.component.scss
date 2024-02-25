@@ -91,3 +91,25 @@ div {
         }
     }
 }
+
+#aMeMobile {
+  display: none;
+}
+#skillMobile {
+  display: none;
+}
+
+@media(max-width: 1450px) {
+  #aMeDesktop {
+    display: none !important;
+  }
+  #aMeMobile {
+    display: flex !important;
+  }
+  #skillDesktop{
+    display: none !important;
+  }
+  #skillMobile {
+    display: flex;
+  }
+}

@@ -43,6 +43,12 @@
         position: relative;
         right: -380px;
         top: 10px;
+        @media(max-width:1250px) {
+          right: -270px;
+        }
+        @media(max-width:920px) {
+          right: -50px;
+        }
       }
     }
     > p {
@@ -69,6 +75,9 @@
     @media(max-width: 1450px) {
       margin-left: 90px;
       margin-right: 90px;
+    }
+    @media(max-width: 1320px) {
+      justify-content: center;
     }
     background-color: #141d2f;
     > .projects-cards {

@@ -23,6 +23,7 @@ export class HeadertemplateComponent {
     this.skills = aCategoryName === 'skills';
     this.portfolio = aCategoryName === 'portfolio';
     this.contact = aCategoryName === 'contact';
+    this.emitCloseBarEvent();
   }
 
   emitCloseBarEvent() {
