@@ -37,6 +37,9 @@
   @media(max-width: 900px) {
     margin-right: 48px;
   }
+  @media(max-width: 520px) {
+    margin-right: 24px;
+  }
 }
 
 .navbar {
@@ -65,4 +68,22 @@
 @keyframes slideOut {
   from{left: 0}
   to{left: 1100px;}
+}
+
+.fade-out {
+  animation: fadeOut 0.2s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.1s forwards;
+}
+
+@keyframes fadeOut {
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+
+@keyframes fadeIn {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }

@@ -13,6 +13,12 @@
     }
     > img {
       height: 850px;
+      @media(max-width: 700px){
+        height: 415px;
+        position: relative;
+        top: -48px;
+        left: 232px;
+      }
     }
   }
   > .middle-content {
@@ -31,6 +37,12 @@
       @media(max-width: 1400px) {
         font-size: 50px;
       }
+      @media(max-width: 800px){
+        font-size: 34px;
+      }
+      @media(max-width: 520px) {
+        font-size: 30px;
+      }
     }
     > div {
       > h1 {
@@ -39,6 +51,12 @@
         @media(max-width: 1400px) {
           font-size: 74px;
         }
+        @media(max-width: 800px){
+          font-size: 48px;  
+        }
+        @media(max-width: 520px) {
+          font-size: 44px;
+        }
       }
       > h3 {
         font-size: 80px;
@@ -46,6 +64,12 @@
         color: #ff4747;
         @media(max-width: 1400px) {
           font-size:46px;
+        }
+        @media(max-width: 800px){
+          font-size: 32px;  
+        }
+        @media(max-width: 520px) {
+          font-size: 28px;
         }
       }
     }
@@ -80,6 +104,10 @@
         font-family: "Pobbins";
         padding: 16px;
         transition: all 0.4s ease;
+        @media(max-width: 520px) {
+          font-size: 20px;
+          padding: 12px;
+        }
         &:hover {
           cursor: pointer;
           width: 200px;
@@ -94,9 +122,19 @@
 
   > .right-shape {
     margin-right: -390px;
+    @media(max-width: 700px){
+      margin-right: -300px;
+    }
     > img {
       height: 800px;
       margin-top: -280px;
+      @media(max-width: 700px){
+        height: 464px;
+        margin-top: 36px;
+      }
+      @media(max-width: 520px) {
+        margin-top: 70px;
+      }
     }
   }
 }
@@ -124,8 +162,10 @@
        width: 90px;   
       }
       @media(max-width: 900px) {
-        width: 48px;
-        
+        width: 48px; 
+      }
+      @media(max-width: 520px) {
+        width: 24px;
       }
     }
     >.soc-links-cont {
@@ -142,12 +182,16 @@
     rotate: 90deg;
     margin-top: -180px;
     margin-right: 30px;
+    @media(max-width: 700px){
+      display: none;
+    }
     >p {
       margin-right: 16px;
       font-size: 28px;
       @media(max-width: 1110px){
         font-size: 24px;
       }
+      
     }
     >img {
       rotate: 90deg;

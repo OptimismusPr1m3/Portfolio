@@ -1,5 +1,5 @@
 <section class="head-content fontfam-poppins">
-  <app-headertemplate class="flex" *ngIf="!barOpened"></app-headertemplate>
+  <app-headertemplate class="flex" [class.fade-out]="barOpened" [class.fade-in]="!barOpened"></app-headertemplate>
   <div (click)="toggleNavBar()" class="mobile-navbar" *ngIf="!barOpened">
     <img src="assets/images/icons/burger-menu.png">
   </div>

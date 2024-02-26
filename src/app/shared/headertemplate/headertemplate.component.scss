@@ -8,8 +8,11 @@ div {
     @media (max-width: 1450px) {
       margin-left: 90px;
     }
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       margin-left: 48px;
+    }
+    @media(max-width: 520px) {
+      margin-left: 24px;
     }
     > p {
       margin: 0;
@@ -47,12 +50,14 @@ div {
     flex-direction: column;
     a {
       margin-right: 40px;
-
       font-size: 24px;
       text-decoration: none;
       color: #ffffff;
       &:hover {
         color: #fa7902;
+      }
+      @media(max-width:700px) {
+        margin-right: 0;
       }
     }
   }
@@ -70,32 +75,39 @@ div {
 }
 
 .bar-opened {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .cross {
-    height: 32px;
-    margin-right: 90px;
-    @media(max-width: 900px) {
-      margin-right: 48px;
-    }
+  height: 32px;
+  margin-right: 90px;
+  @media (max-width: 900px) {
+    margin-right: 48px;
+  }
 }
 
 .links-column {
-    display: flex !important;
-    flex-direction: column;
-    margin-right: 0;
-    height: 400px;
-    justify-content: space-between;
-    margin-top: 80px;
-    >div{
-        >a{
-            font-size: 40px;
-        }
+  display: flex !important;
+  flex-direction: column;
+  margin-right: 0;
+  height: 400px;
+  justify-content: space-between;
+  margin-top: 80px;
+  @media(max-width:700px) {
+    height: 300px;
+  }
+  > div {
+    > a {
+      font-size: 40px;
+      @media(max-width:700px) {
+        font-size: 32px;
+      }
     }
+    
+  }
 }
 
 #aMeMobile {
@@ -105,14 +117,14 @@ div {
   display: none;
 }
 
-@media(max-width: 1450px) {
+@media (max-width: 1450px) {
   #aMeDesktop {
     display: none !important;
   }
   #aMeMobile {
     display: flex !important;
   }
-  #skillDesktop{
+  #skillDesktop {
     display: none !important;
   }
   #skillMobile {

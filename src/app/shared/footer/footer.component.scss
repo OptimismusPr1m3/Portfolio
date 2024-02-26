@@ -16,11 +16,17 @@
     width: 100%;
     height: 280px;
     align-items: center;
+    @media (max-width: 850px) {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 350px;
+    }
     > .left-cont {
       display: flex;
       width: 350px;
       flex-direction: column;
-      >a {
+      > a {
         text-decoration: none;
         color: #ffffff;
       }
@@ -28,15 +34,23 @@
         margin-left: 120px;
         display: flex;
         flex-direction: row;
-        @media(max-width: 1450px) {
-         margin-left: 90px; 
+        @media (max-width: 1450px) {
+          margin-left: 90px;
         }
-        @media(max-width:900px) {
+        @media (max-width: 900px) {
           margin-left: 48px;
+        }
+        @media(max-width: 850px) {
+          margin-left: 0;
+          justify-content: center;
+          margin-top: 40px;
         }
         > p {
           font-weight: 700;
           font-size: 40px;
+          @media(max-width: 850px) {
+            font-size: 48px;
+          }
         }
         > .i-letter-styling {
           background: linear-gradient(to top, #ffffff 65%, #ff4747 35%);
@@ -55,8 +69,11 @@
         margin-left: 124px;
         display: flex;
         flex-direction: column;
-        @media(max-width: 1450px) {
-         margin-left: 94px; 
+        @media (max-width: 1450px) {
+          margin-left: 94px;
+        }
+        @media (max-width: 850px) {
+          display: none;
         }
         &:hover .impressum-underline {
           background-color: #ff4747;
@@ -80,6 +97,10 @@
       display: flex;
       align-items: center;
       width: 300px;
+      @media(max-width: 850px) {
+       width: 100%;
+       justify-content: center;   
+      }
       > p {
         margin-right: 8px;
         font-weight: 300;
@@ -93,12 +114,17 @@
       justify-content: flex-start;
       margin-right: -60px;
       width: 350px;
-      @media(max-width: 1450px) {
-       margin-right: -90px;   
+      @media (max-width: 1450px) {
+        margin-right: -90px;
       }
-      @media(max-width: 900px) {
-        margin-right: -132px;   
-       }
+      @media (max-width: 900px) {
+        margin-right: -132px;
+      }
+      @media(max-width: 850px) {
+        margin: 0;   
+        width: 100%;
+        justify-content: center; 
+      }
       > a {
         display: flex;
         flex-direction: row;
@@ -108,6 +134,10 @@
         width: 30px;
         margin-right: 40px;
         transition: all 0.1s ease;
+        @media(max-width: 850px) { 
+         margin-right: 20px;
+         margin-left: 20px;
+        }
         &:hover img {
           transition: all 0.3s ease;
           transform: scale(1.2);
@@ -125,5 +155,29 @@
         }
       }
     }
+  }
+}
+
+.impressum-mobile {
+  display: none;
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &:hover .impressum-underline-mobile {
+    background-color: #ff4747;
+  }
+  > .impressum-cont-mobile {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  > .impressum-underline-mobile {
+    transition: all 0.3s ease;
+    background-color: transparent;
+    height: 2px;
+    width: 54px;
+    margin-left: -40px;
   }
 }
