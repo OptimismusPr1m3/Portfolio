@@ -20,7 +20,7 @@
       margin-top: 60px;
       margin-bottom: -40px;
     }
-    @media (max-width: 520px) {
+    @media (max-width: 420px) {
       margin-top: 20px;
     }
     > .icons-row {
@@ -28,6 +28,12 @@
       flex-direction: row;
       @media (max-width: 520px) {
         margin-left: 24px;
+      }
+      @media(max-width: 370px) {
+        margin-left: 8px;
+      }
+      @media(max-width: 348px) {
+        margin-left: 0;
       }
       > .icon-with-text {
         width: 80px;
@@ -52,6 +58,17 @@
         @media (max-width: 520px) {
           margin-left: 0;
           margin-right: 16px;
+        }
+        @media(max-width: 412px) {
+          margin-right: 4px;
+          margin-bottom: 32px;
+        }
+        @media(max-width: 340px) {
+          margin-right: 0;
+        }
+        @media(max-width: 330px) {
+          width: 76px;
+          height: 88px;
         }
         > img {
           margin-bottom: 12px;
@@ -125,6 +142,9 @@
         @media(max-width: 520px) {
           font-size: 48px;
         }
+        @media(max-width: 450px) {
+          font-size: 40px;
+        }
       }
       > div {
         height: 5px;
@@ -147,6 +167,9 @@
         @media (max-width: 700px) {
           margin-right: 0;
         }
+        @media(max-width: 450px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -156,7 +179,7 @@
   text-decoration: none;
   color: #ffffff;
   margin-top: 40px;
-  width: 100%;
+  width: 82%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -174,12 +197,24 @@
     font-family: "Pobbins";
     padding: 16px;
     transition: all 0.4s ease;
+    @media(max-width: 450px) {
+      font-size: 20px;
+    }
+    @media(max-width: 350px) {
+      height: 50px;
+      width: 140px;
+      padding: 12px;
+    }
     &:hover {
       cursor: pointer;
       width: 200px;
       height: 80px;
       background-color: #ff4747;
       border-color: #ff4747;
+      @media(max-width: 350px) {
+        width: 160px;
+        height: 60px;
+      }
     }
   }
 }
@@ -192,6 +227,7 @@
     display: flex !important;
     justify-content: center;
     margin-top: -130px;
+    width: 100%;
   }
 }
 

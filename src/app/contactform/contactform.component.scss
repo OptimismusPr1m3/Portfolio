@@ -29,6 +29,9 @@
         margin-left: 24px;
         font-size: 48px;
       }
+      @media(max-width: 450px) {
+        font-size: 40px;
+      }
     }
     > .contact-transition-line {
       background-color: #e86f00;
@@ -102,6 +105,12 @@
           @media(max-width: 520px) {
             margin-left: 14px;
           }
+          @media(max-width: 450px) {
+            font-size: 24px;
+          }
+          @media(max-width: 330px) {
+            font-size: 22px;
+          }
         }
       }
       > .problem-content {
@@ -120,6 +129,13 @@
         @media(max-width: 520px) {
           margin-left: 24px;
           margin-right: 100px;
+        }
+        @media(max-width: 450px) {
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+        @media(max-width: 330px) {
+          margin-right: 32px;
         }
       }
     }
@@ -152,6 +168,12 @@
           ::placeholder {
             font-family: "Poppins";
             color: #ffffff;
+            @media(max-width: 450px) {
+              font-size: 14px;
+            }
+            @media(max-width: 350px) {
+              font-size: 13px;
+            }
           }
           > input[type="email"],
           [type="text"],
@@ -165,6 +187,9 @@
             font-weight: 400;
             resize: vertical;
             color: #ffffff;
+            @media(max-width: 350px) {
+              font-size: 14px;
+            }
             &:hover {
               border-color: #e86f00;
               cursor: pointer;
@@ -196,6 +221,10 @@
             color: #ff4747;
             font-size: 14px;
             margin-top: 8px;
+            @media(max-width: 420px) {
+              font-size: 13px;
+              margin-left: 12px;
+            }
           }
         }
         > .checkbox-validation {
@@ -216,6 +245,12 @@
           > p {
             font-size: 14px;
             margin-left: 16px;
+            @media(max-width: 450px) {
+              font-size: 13px;
+            }
+            @media(max-width: 330px) {
+              font-size: 12px;
+            }
             > a {
               text-decoration: none;
               color: #ff4747;
@@ -241,10 +276,27 @@
             border-radius: 8px;
             transition: all 0.3s ease;
             cursor: not-allowed;
+            @media(max-width: 450px) {
+              font-size: 20px;
+            }
+            @media(max-width: 350px) {
+              font-size: 18px;
+              height: 52px;
+              width: 200px;
+              margin-right: -24px;
+            }
             &:hover:not(:disabled) {
               height: 80px;
               width: 300px;
               cursor: pointer;
+              @media(max-width: 450px) {
+                height: 70px;
+                width: 270px;
+              }
+              @media(max-width: 330px) {
+                height: 60px;
+                width: 220px;
+              }
             }
             &:not(:disabled) {
               border-color: #e86f00;
@@ -296,6 +348,9 @@ input:-internal-autofill-selected {
     @media(max-width: 600px) {
       left: 340px;     
     }
+    @media(max-width: 420px) {
+      left: 388px;
+    }
   }
 }
 
@@ -310,6 +365,12 @@ input:-internal-autofill-selected {
     margin-right: 120px;
     @media(max-width: 1450px) {
      margin-right: 90px;     
+    }
+    @media(max-width: 900px) {
+      margin-right: 48px;
+    }
+    @media(max-width: 520px) {
+      margin-right: 24px;
     }
     &:hover {
       content: url('/assets/images/icons/scroll_orange.png');

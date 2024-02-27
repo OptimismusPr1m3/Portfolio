@@ -17,18 +17,16 @@ export class ContactformComponent {
   isInvalidName: boolean = false;
   isInvalidMail: boolean = false;
   isInvalidMessage: boolean = false;
-
-  mailTest = true;
+  pPolicy: boolean = false;
 
   contactData = {
-    name: '',
-    email: '',
-    message: '',
-    pPolicy: false
+    name: "",
+    email: "",
+    message: "",
   };
   
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://bastian-wolff.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -55,6 +53,7 @@ export class ContactformComponent {
       this.checkMessageValidation();
     }
   }
+  
   checkMessageValidation() {
     if (this.contactData.message == '') {
       this.isInvalidMessage = true;

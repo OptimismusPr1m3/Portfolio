@@ -10,6 +10,10 @@ section {
         @media(max-width: 800px){
            overflow: hidden;
         }
+        @media(max-width: 450px) {
+            margin-bottom: -170px;
+            margin-top: 40px;
+        }
         >.shape {
             position: absolute;
             top: 80px;
@@ -22,6 +26,9 @@ section {
                 height: 650px;
                 top: 4px;
             }
+            @media(max-width: 450px) {
+                height: 464px;
+            }
         }
         >.picture {
             position: relative;
@@ -31,6 +38,9 @@ section {
             }
             @media(max-width: 800px){
                 height: 480px;
+            }
+            @media(max-width: 450px) {
+                height: 400px;
             }
         }
     }
