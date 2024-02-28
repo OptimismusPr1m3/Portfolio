@@ -40,6 +40,7 @@ export class ContactformComponent {
     if (ngForm.valid && ngForm.submitted) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
         next: (response: any) => {
+          console.log(response)
           ngForm.resetForm();
         },
         error: (error: any) => {
