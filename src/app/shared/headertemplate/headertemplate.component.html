@@ -22,7 +22,7 @@
       (click)="toggleActiveLink('aboutMe')"
       [class.active-link]="aboutMe"
       href="#aboutMe"
-      >About me</a
+      >{{lService.header['aboutMe']}}</a
     >
     <div [class.active-underline]="aboutMe"></div>
   </div>
@@ -33,7 +33,7 @@
       (click)="toggleActiveLink('aboutMe')"
       [class.active-link]="aboutMe"
       href="#aboutMeMobile"
-      >About me</a
+      >{{lService.header['aboutMe']}}</a
     >
     <div [class.active-underline]="aboutMe"></div>
   </div>
@@ -44,7 +44,7 @@
       (click)="toggleActiveLink('skills')"
       [class.active-link]="skills"
       href="#skills"
-      >Skills</a
+      >{{lService.header['skills']}}</a
     >
     <div [class.active-underline]="skills"></div>
   </div>
@@ -55,7 +55,7 @@
       (click)="toggleActiveLink('skills')"
       [class.active-link]="skills"
       href="#skillsMobile"
-      >Skills</a
+      >{{lService.header['skills']}}</a
     >
     <div [class.active-underline]="skills"></div>
   </div>
@@ -75,7 +75,7 @@
       (click)="toggleActiveLink('contact')"
       [class.active-link]="contact"
       href="#contact"
-      >Contact</a
+      >{{lService.header['contact']}}</a
     >
     <div [class.active-underline]="contact"></div>
   </div>

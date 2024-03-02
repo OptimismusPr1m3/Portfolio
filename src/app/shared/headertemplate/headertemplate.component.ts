@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { LanguageService } from '../../service/language.service';
 
 
 @Component({
@@ -28,6 +29,10 @@ export class HeadertemplateComponent {
 
   emitCloseBarEvent() {
     this.barHasClosed.emit(true);
+  }
+
+  constructor(public lService: LanguageService) {
+    
   }
 
 }

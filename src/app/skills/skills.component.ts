@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../service/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -52,5 +53,5 @@ export class SkillsComponent {
     return poppedIcons;
   }*/
 
-  constructor() {}
+  constructor(public lService: LanguageService) {}
 }
