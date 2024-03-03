@@ -15,6 +15,8 @@ export class HeadertemplateComponent {
   skills: boolean = false;
   portfolio: boolean = false;
   contact: boolean = false;
+  isdefaultLang: boolean = true;
+  isGerLang: boolean = false;
 
   @Input() barIsOpen: boolean | undefined;
   @Output() barHasClosed: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -24,15 +26,20 @@ export class HeadertemplateComponent {
     this.skills = aCategoryName === 'skills';
     this.portfolio = aCategoryName === 'portfolio';
     this.contact = aCategoryName === 'contact';
-    this.emitCloseBarEvent();
+    //this.emitCloseBarEvent();
   }
 
   emitCloseBarEvent() {
     this.barHasClosed.emit(true);
   }
 
-  constructor(public lService: LanguageService) {
-    
+  changeLang(lang: string) {
+    this.lService.changeLang(lang);
+    this.isdefaultLang = lang === 'en'
+    this.isGerLang = lang === 'de'
   }
+
+  constructor(public lService: LanguageService) {}
+
 
 }

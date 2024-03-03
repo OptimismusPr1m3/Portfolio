@@ -17,14 +17,39 @@ export class LanguageService {
     p3: '',
   };
   skills: { [key: string]: string } = {
-    p1: ''
-  }
+    p1: '',
+  };
+  portfolio: { [key: string]: string } = {
+    samplePhrase1: '',
+    samplePhrase2: '',
+  };
+  contactSection: { [key: string]: string } = {
+    cHead: '',
+    problemHead: '',
+    fillerP11: '',
+    fillerP12: '',
+    fillerP13: '',
+    fillerP21: '',
+    fillerP22: '',
+    warn1: '',
+    warn2: '',
+    warn3: '',
+    pPolicy1: '',
+    pPolicy2: '',
+    pPolicy3: '',
+    placeHolder1: '',
+    placeHolder2: '',
+    placeHolder3: '',
+  };
+
+  selectedLanguage = i18next;
 
   imprint = '';
   fullName = '';
   constructor() {
     i18next.init({
-      lng: 'de',
+      lng: 'en',
+      debug: true,
       resources: {
         en: {
           translation: {
@@ -53,9 +78,33 @@ export class LanguageService {
                 delivery.`,
             },
             skills: {
-                p1: `I have gained experience in building projects with various front end
-                technologies and concepts`
-            }
+              p1: `I have gained experience in building projects with various front end
+                technologies and concepts`,
+            },
+            portfolio: {
+              samplePhrase1: `This page is a sample of my work! Scroll down to view other`,
+              samplePhrase2: `projects I have developed.`,
+            },
+            contactSection: {
+              cHead: 'Contact',
+              problemHead: 'Got a problem to solve?',
+              fillerP11:
+                'Contact me through this form, I am interested in hearing',
+              fillerP12:
+                'you, knowing your ideas and contributing to your projects',
+              fillerP13: 'with my work',
+              fillerP21: 'Need a Frontend developer?',
+              fillerP22: 'Contact me!',
+              warn1: 'Your name is required',
+              warn2: 'Your email is required',
+              warn3: 'Please enter a message',
+              pPolicy1: `I've read the`,
+              pPolicy2: 'privacy policy',
+              pPolicy3: 'and agree to the processing of my data as outlined',
+              placeHolder1: 'Your Name',
+              placeHolder2: 'Your email',
+              placeHolder3: 'Your message',
+            },
           },
         },
         de: {
@@ -89,9 +138,33 @@ export class LanguageService {
               sicherstelle.`,
             },
             skills: {
-                p1: `Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen
-                Frontend-Technologien und Konzepten gesammelt.`
-            }
+              p1: `Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen
+              Frontend-Technologien und Konzepten gesammelt.`,
+            },
+            portfolio: {
+              samplePhrase1: `Dieser Bereich ist ein Beispiel meiner Arbeit!`,
+              samplePhrase2: `Scrolle nach unten, um weitere Projekte anzusehen, die ich entwickelt habe.`,
+            },
+            contactSection: {
+              cHead: 'Kontakt',
+              problemHead: 'Haben Sie ein Problem zu lösen?',
+              fillerP11:
+                'ontaktieren Sie mich über dieses Formular. Ich bin daran interessiert,',
+              fillerP12:
+                'von Ihnen zu hören, Ihre Ideen kennenzulernen und durch',
+              fillerP13: 'meine Arbeit zu Ihren Projekten beizutragen.',
+              fillerP21: 'Brauchen Sie einen Frontend-Entwickler?',
+              fillerP22: 'Kontaktieren Sie mich!',
+              warn1: 'Ihr Name ist erforderlich!',
+              warn2: 'Ihre Email ist erforderlich!',
+              warn3: 'Bitte geben Sie eine Nachricht ein!',
+              pPolicy1: `Ich habe die`,
+              pPolicy2: 'Datenschutzrichtlinie',
+              pPolicy3: 'gelesen und stimme der Verarbeitung meiner Daten zu.',
+              placeHolder1: 'Ihr Name',
+              placeHolder2: 'Ihre Email',
+              placeHolder3: 'Ihre Nachricht',
+            },
           },
         },
       },
@@ -99,6 +172,8 @@ export class LanguageService {
     this.setAreaLang(this.header, 'header');
     this.setAreaLang(this.aboutMe, 'aboutMe');
     this.setAreaLang(this.skills, 'skills');
+    this.setAreaLang(this.portfolio, 'portfolio');
+    this.setAreaLang(this.contactSection, 'contactSection');
   }
 
   setAreaLang(area: { [key: string]: string }, langArea: string) {
@@ -109,7 +184,10 @@ export class LanguageService {
 
   changeLang(language: string) {
     i18next.changeLanguage(language);
-    this.imprint = i18next.t('imprint');
-    this.fullName = i18next.t('fullName');
+    this.setAreaLang(this.header, 'header');
+    this.setAreaLang(this.aboutMe, 'aboutMe');
+    this.setAreaLang(this.skills, 'skills');
+    this.setAreaLang(this.portfolio, 'portfolio');
+    this.setAreaLang(this.contactSection, 'contactSection');
   }
 }

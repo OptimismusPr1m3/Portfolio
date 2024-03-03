@@ -8,8 +8,8 @@
       <img src="/assets/images/shapes/purple_shadow_pf.png">
     </div>
     <p>
-      This page is a sample of my work! Scroll down to view other <br />
-      projects I have developed.
+      {{lService.portfolio["samplePhrase1"]}} <br>
+      {{lService.portfolio["samplePhrase2"]}}
     </p>
   </div>
   <div class="portfolio-cards">
@@ -22,7 +22,8 @@
         </div>
         <div class="pf-info-cont">
           <h4>{{portfolioTitles[i]}}</h4>
-          <p>{{portfolioInfos[i]}}</p>
+          <p *ngIf="lService.selectedLanguage.language === 'en'">{{portfolioInfosEN[i]}}</p>
+          <p *ngIf="lService.selectedLanguage.language === 'de'"> {{portfolioInfosDE[i]}}</p>
           <div class="used-tech">
             <p>{{portfolioTech[i]}}</p>
           </div>

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { LanguageService } from '../service/language.service';
 
 @Component({
   selector: 'app-contactform',
@@ -72,4 +73,6 @@ export class ContactformComponent {
       this.isInvalidMail = true;
     }
   }
+
+  constructor(public lService: LanguageService){}
 }
