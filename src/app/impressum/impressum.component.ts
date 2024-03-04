@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../service/language.service';
 
 @Component({
   selector: 'app-impressum',
@@ -9,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './impressum.component.scss'
 })
 export class ImpressumComponent {
-
+  constructor(public lService: LanguageService){}
 }

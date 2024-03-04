@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../service/language.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -9,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-
+  constructor(public lService: LanguageService){}
 }
