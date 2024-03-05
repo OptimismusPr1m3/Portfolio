@@ -17,17 +17,32 @@
     > h1 {
         font-size: 100px;
         margin-bottom: 40px;
+        @media(max-width: 1260px){
+            font-size: 72px;
+        }
         @media(max-width: 900px){
-            font-size: 64px;
+            font-size: 56px;
+        }
+        @media(max-width: 705px){
+            font-size: 50px;
+        }
+        @media(max-width: 640px){
+            font-size: 44px;
         }
         @media(max-width: 560px){
-            font-size: 48px;
+            font-size: 36px;
+        }
+        @media(max-width: 450px){
+            font-size: 34px;
         }
         @media(max-width: 420px){
-            font-size: 40px;
+            font-size: 30px;
+        }
+        @media(max-width: 380px){
+            font-size: 26px;
         }
         @media(max-width: 340px){
-            font-size: 32px;
+            font-size: 24px;
         }
     }
     >div {

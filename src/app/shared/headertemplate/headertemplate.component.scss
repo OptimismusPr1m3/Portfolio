@@ -11,13 +11,16 @@ div {
     @media (max-width: 900px) {
       margin-left: 48px;
     }
-    @media(max-width: 520px) {
+    @media (max-width: 520px) {
       margin-left: 24px;
     }
     > p {
       margin: 0;
       font-weight: 700;
       font-size: 32px;
+      @media (max-width: 450px) {
+        font-size: 28px;
+      }
     }
     > .i-letter-styling {
       background: linear-gradient(to top, #ffffff 65%, #ff4747 35%);
@@ -63,14 +66,12 @@ div {
       &:hover {
         color: #fa7902;
       }
-      @media(max-width:700px) {
+      @media (max-width: 700px) {
         margin-right: 0;
       }
     }
   }
 }
-
-
 
 .active-link {
   color: #fa7902 !important;
@@ -93,8 +94,17 @@ div {
 .cross {
   height: 32px;
   margin-right: 90px;
+  &:hover {
+    cursor: pointer;
+  }
   @media (max-width: 900px) {
     margin-right: 48px;
+  }
+  @media (max-width: 520px) {
+    margin-right: 24px;
+  }
+  @media (max-width: 450px) {
+    height: 24px;
   }
 }
 
@@ -105,17 +115,16 @@ div {
   height: 400px;
   justify-content: space-between;
   margin-top: 80px;
-  @media(max-width:700px) {
+  @media (max-width: 700px) {
     height: 300px;
   }
   > div {
     > a {
       font-size: 40px;
-      @media(max-width:700px) {
+      @media (max-width: 700px) {
         font-size: 32px;
       }
     }
-    
   }
 }
 
@@ -124,6 +133,9 @@ div {
   flex-direction: row !important;
   align-items: center;
   margin-right: 40px;
+  @media (max-width: 450px) {
+    margin-right: 16px;
+  }
   > .lang-div {
     display: flex;
     flex-direction: column;
@@ -133,6 +145,9 @@ div {
     width: 40px;
     > p {
       font-size: 18px;
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
     }
     cursor: pointer;
     > span {
@@ -140,22 +155,42 @@ div {
       width: 0px;
       background-color: #ff4747;
     }
-    >.active-lang {
+    > .active-lang {
       animation: underline 0.4s forwards;
-      @keyframes underline {
-        from{width: 0px;}
-        to{width: 32px;}
+      @media (min-width: 450px) {
+        @keyframes underline {
+          from {
+            width: 0px;
+          }
+          to {
+            width: 32px;
+          }
+        }
+      }
+      @media (max-width: 450px) {
+        @keyframes underline {
+          from {
+            width: 0px;
+          }
+          to {
+            width: 22px;
+          }
+        }
       }
     }
   }
-  >.seperator {
+  > .seperator {
     height: 24px;
     width: 2px;
     background-color: #ff4747;
     margin-left: 8px;
     margin-right: 8px;
+    @media (max-width: 450px) {
+      margin-left: 0;
+      margin-right: 0;
+      height: 20px;
+    }
   }
-  
 }
 
 #aMeMobile {
