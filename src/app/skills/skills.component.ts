@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../service/language.service';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-skills',
@@ -40,18 +42,9 @@ export class SkillsComponent {
   iconsNamesThird: string[] = ['Scrum',
   'Rest-Api',];
 
-  /*
-  sliceIcons(amountToSclice:number, startIndex: number) {
-    let poppedIcons = [];
-    let poppedicon;
-    debugger
-    for (let index = startIndex; index < amountToSclice + startIndex; index++) {
-      poppedicon = this.icons.slice(index, index + 1)
-      poppedIcons.push(poppedicon);
-      
-    }
-    return poppedIcons;
-  }*/
+  ngOnInit() {
+    Aos.init()
+  }
 
   constructor(public lService: LanguageService) {}
 }

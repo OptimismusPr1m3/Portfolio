@@ -2,18 +2,18 @@
   <div class="pf-header">
     <div class="pf-header-transition-cont">
       <div class="pf-head-transition">
-        <div></div>
-        <h2>Portfolio</h2>
+        <div data-aos="flip-up" data-aos-anchor-placement="bottom-bottom"></div>
+        <h2 data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">Portfolio</h2>
       </div>
       <img src="/assets/images/shapes/purple_shadow_pf.png">
     </div>
-    <p>
+    <p data-aos="flip-up">
       {{lService.portfolio["samplePhrase1"]}} <br>
       {{lService.portfolio["samplePhrase2"]}}
     </p>
   </div>
   <div class="portfolio-cards">
-    <div class="projects-cards" *ngFor="let card of portfolioImages; let i = index">
+    <div data-aos="zoom-in-up" class="projects-cards" *ngFor="let card of portfolioImages; let i = index">
       <img src="{{card}}">
       <div class="overlay">
         <div class="git-live-link">
