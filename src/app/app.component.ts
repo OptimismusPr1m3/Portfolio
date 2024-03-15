@@ -6,6 +6,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import Aos from 'aos';
+
 
 @Component({
   selector: 'app-root',
@@ -20,8 +22,12 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     PrivacyPolicyComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'portfolio2';
+
+  ngOnInit() {
+    Aos.init()
+  }
 }
